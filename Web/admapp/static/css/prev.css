@@ -1,0 +1,14 @@
+.card-in{
+    border-radius: 10px;
+    padding-top:20px;
+    width:105%;
+    background:linear-gradient(45deg,black,grey);
+}
+
+.card.card-title,.card p,.card h4{
+    color:white;
+}
+
+.rule{
+    width:50%;
+}

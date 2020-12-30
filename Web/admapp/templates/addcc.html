@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add CC</title>
+    <meta charset="utf-8" >
+    <meta name="viewreport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      /*.fa-graduation-cap {
+      font-size: 72px;
+      }*/
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="#">Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'vc' %}"><i class="fa fa-fw fa-home" style="margin-right:4px;"></i>Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item " style="margin-right: 15px;">
+            <a class="nav-link" href="{% url 'adc' %}"><i class="fa fa-graduation-cap" style="margin-right:4px;"></i>Add Club</a>
+          </li>
+          <li class="nav-item active" style="margin-right: 15px;">
+            <a class="nav-link" href="{% url 'clubid' %}"><i class="fa fa-cc" style="margin-right:4px;"></i>Add CC</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px;">
+            <a class="nav-link" href="{% url 'viewcc' %}"><i class="fa fa-users" style="margin-right:4px;"></i>View Past CC Members</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px;">
+            <a class="nav-link" href="{% url 'viewevent' %}"><i class="fa fa-bullhorn" style="margin-right:4px;"></i>View Past Events</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px;">
+            <a class="nav-link" href="{% url 'logout' %}">Logout<i class="fa fa-sign-out" style="margin-right:4px;"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-cc" style="font-size:72px;"></i>
+        <h1>Add CC Member</h1>
+      
+  
+      </div>
+      <form action="{% url 'addcc' %}" method="post">
+        {% csrf_token %}
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enter Details</h2>
+        </div>
+        <div class="info">
+    <input class="fname" type="text" name="name" placeholder="Name" required>
+	  <input class="fname" type="number" name="roll_no" placeholder="Roll no" required>
+          
+          <p>
+             <label>Select Club id</label>
+              <select type="number" name="club_id">
+                {% for i in c %}
+               <option value="{{i.club_id}}" >{{i.club_id}}</option>
+               {%endfor%}
+              </select>
+              
+           </p>
+	  <input type="text" name="ph_no" placeholder="Mobile number" required>
+          <input type="text" name="email" placeholder="Email" required>
+        </div>
+        <button type="submit" >Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

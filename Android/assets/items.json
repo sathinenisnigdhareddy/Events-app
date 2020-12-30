@@ -1,0 +1,20 @@
+[
+	{
+		"Event": "Coding1",
+		"Date;Time": "21/08/20;10:30"
+    },
+    {
+		"Event": "FrontEnd",
+		"Date;Time": "22/08/20;11:30"
+    },
+    {
+		"Event": "Backend",
+		"Date;Time": "21/08/20;12:30"
+    },
+    {
+		"Event": "Coding2",
+		"Date;Time": "22/08/20;13:30"
+	}
+]
+
+
